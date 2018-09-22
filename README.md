@@ -5,7 +5,7 @@
 
 ## Get started
 
- 
+
 
  1. Create a repository on your github account
 
@@ -13,13 +13,13 @@
 
  2. Clone the project from this repo https://github.com/amineD200/ionic-technical-test.git
 	``` bash
-	> $ git clone https.... 
+	> $ git clone https....
 	```
- 3. Create a new branch develop 
+ 3. Create a new branch develop
 	``` bash
 	> $ git ...
 	```
-4. Merge the master into develop branch 
+4. Merge the master into develop branch
 	``` bash
 	> $ git ...
 	```
@@ -28,16 +28,16 @@
 -  Commit related messages.
 - You should only commit code when a task or feature is completed, don't commit half-done work or a lot of tasks at the same time.
  - Write good commit messages, follow this template:
-    > task-number message 
-     e.g: * MITT-1 create the page listPosts... and add component... 
+    > task-number message
+     e.g: * MITT-1 create the page listPosts... and add component...
  - The code should be :
 	  - well-commented
-      - well-organized (Use services, ...)      
+      - well-organized (Use services, ...)
  - Don't put the whole code in one file.
- - Use the ionic components. 
+ - Use the ionic components.
 
 #The APP
-We want to create an hybrid application for our blog. 
+We want to create an hybrid application for our blog.
 
 ## The API:
 
@@ -62,7 +62,7 @@ We want to create an hybrid application for our blog.
  - [ ] MITT-1: Create the Page listPosts to show the posts with these informations: 'title'
 Body preview limited to 200 character and a 'readmore' Button.
 
- - [ ] MITT-2: Create a page to display the blog post with these information displayed: 'title' and the body of the post 
+ - [ ] MITT-2: Create a page to display the blog post with these information displayed: 'title' and the body of the post
 
  - [ ]  MITT-3: At the end of the post page, display the list of the comments
 	>  Dont forget to do some styling for the application

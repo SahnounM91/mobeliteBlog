@@ -1,8 +1,7 @@
 {
-  "name": "ionic-technical-test",
-  "app_id": "",
-  "type": "ionic-angular",
+  "name": "mobelite blog",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "type": "ionic-angular"
 }
