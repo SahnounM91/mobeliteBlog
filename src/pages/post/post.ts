@@ -19,9 +19,11 @@ export class PostPage {
 
   id:number
   post: any = {}
+  comments: any  = []
   constructor(public navCtrl: NavController, public navParams: NavParams,public postsProvider: PostsProvider) {
     this.id = navParams.get('id')
     this.getPostDetails(this.id)
+    this.getPostComments(this.id)
   }
 
   ionViewDidLoad() {
@@ -31,6 +33,12 @@ export class PostPage {
   getPostDetails(id){
     this.postsProvider.getPostByID(id).subscribe(data => {
       this.post = data
+    })
+  }
+
+  getPostComments(id){
+    this.postsProvider.getComments(id).subscribe(data => {
+      this.comments = data
     })
   }
 }

@@ -31,4 +31,15 @@ export class PostsProvider {
     });
   }
 
+  getComments(id){
+    return Observable.create(observer => {
+      this.http.get(URLS.POSTS + "/" + id + "/comments").subscribe(data => {
+        observer.next(data)
+        console.log(data)
+      }, err =>{
+        console.log(err)
+      });
+    });
+  }
+
 }
