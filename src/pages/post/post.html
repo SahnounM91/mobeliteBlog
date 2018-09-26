@@ -1,0 +1,22 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{post.title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding *ngIf="post">
+  <ion-card >
+    <img src="https://placekitten.com/760/300"/>
+    <ion-card-content>
+      <ion-card-title class="post-title" >
+        {{ post.title }}
+      </ion-card-title>
+      <p class="post-content">
+        {{ post.body}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

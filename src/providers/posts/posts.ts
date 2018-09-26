@@ -21,4 +21,14 @@ export class PostsProvider {
     });
   }
 
+  getPostByID(id){
+    return Observable.create(observer => {
+      this.http.get(URLS.POSTS + "/" + id).subscribe(data => {
+        observer.next(data)
+      }, err =>{
+        console.log(err);
+      });
+    });
+  }
+
 }

@@ -20,5 +20,9 @@ export class HomePage {
       this.posts = data;
     });
   }
+  postDetails(id){
+    this.navCtrl.push("PostPage", {id: id})
+  }
+
 
 }
