@@ -17,7 +17,7 @@
         <p class="post-content">
           {{ post.body | slice:0:80}} ...
         </p>
-        <button ion-button button-small  (click)="postDetails(post.id)">Read more</button>
+        <button ion-button button-small color="readmore" (click)="postDetails(post.id)">Read more</button>
       </ion-card-content>
     </ion-card>
 

@@ -38,9 +38,12 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  navbar:     #428AE0,
+  readmore:   #FE6779
 );
 
+$toolbar-background:map-get($colors, navbar) ;
 
 // App iOS Variables
 // --------------------------------------------------
