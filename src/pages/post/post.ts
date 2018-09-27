@@ -21,6 +21,7 @@ export class PostPage {
   post: any = {}
   comments: any  = []
   constructor(public navCtrl: NavController, public navParams: NavParams,public postsProvider: PostsProvider) {
+    //pass the id as param to post page
     this.id = navParams.get('id')
     this.getPostDetails(this.id)
     this.getPostComments(this.id)
@@ -30,12 +31,15 @@ export class PostPage {
     console.log('ionViewDidLoad PostPage');
   }
 
+  //get post details by id from api
   getPostDetails(id){
     this.postsProvider.getPostByID(id).subscribe(data => {
       this.post = data
     })
   }
 
+
+  //get post related comments by id
   getPostComments(id){
     this.postsProvider.getComments(id).subscribe(data => {
       this.comments = data

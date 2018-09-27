@@ -17,24 +17,32 @@ export class HomePage {
   posts: any = [];
 
   constructor(public navCtrl: NavController, public postsProvider: PostsProvider) {
+    //get all posts
     this.getPosts();
   }
 
+  //infinitScroll method
   doInfinite(infiniteScroll) {
+    //time for loading the newest data
     setTimeout (() => {
       this.postsProvider.getPosts().subscribe(data => {
+        //store data in tmp array
         this.tmpPosts = data
+
+        //add next portion of data to result var
         let result = this.tmpPosts.slice(this.page *5);
+        //loop and push the data from result to perpage length post
         for (let i = 1; i <= this.perPage; i ++) {
             this.posts.push(result[i]);
         }
-        console.log(this.posts)
       })
       this.page += 1;
       infiniteScroll.complete ();
-    }, 500);
+    }, 200);
   }
 
+
+  //get all post from providers
   getPosts() {
     this.postsProvider.getPosts()
     .subscribe(data => {
@@ -49,6 +57,7 @@ export class HomePage {
   }
 
 
+  //get post details and show it on new page
   postDetails(id){
     this.navCtrl.push("PostPage", {id: id})
   }

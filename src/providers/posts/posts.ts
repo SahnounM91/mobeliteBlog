@@ -11,6 +11,7 @@ export class PostsProvider {
   constructor(public http: HttpClient) {
   }
 
+  //use observable t get posts from api
   getPosts(){
     return Observable.create(observer => {
       this.http.get(URLS.POSTS).subscribe(data => {
@@ -21,6 +22,7 @@ export class PostsProvider {
     });
   }
 
+  //use observable to get post details by id from api
   getPostByID(id){
     return Observable.create(observer => {
       this.http.get(URLS.POSTS + "/" + id).subscribe(data => {
@@ -31,11 +33,11 @@ export class PostsProvider {
     });
   }
 
+  //get comments of single post from api
   getComments(id){
     return Observable.create(observer => {
       this.http.get(URLS.POSTS + "/" + id + "/comments").subscribe(data => {
         observer.next(data)
-        console.log(data)
       }, err =>{
         console.log(err)
       });
