@@ -3,12 +3,14 @@ page-post {
   .comment-body{
     text-align: justify;
   }
-  .comment-user{
+  .comment-username{
     font-weight: 500;
   }
   .card-md{
     width: 100%;
     margin: 0 !important;
   }
-
+  .post-title{
+    color:map-get($colors, post-title);
+  }
 }
