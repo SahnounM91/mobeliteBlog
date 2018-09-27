@@ -40,8 +40,10 @@ $colors: (
   light:      #f4f4f4,
   dark:       #222,
   navbar:     #428AE0,
-  readmore:   #FE6779
-);
+  readmore:   #FE6779,
+  posts-body: #D3D3D3,
+  post-title: #F07DA8
+  );
 
 $toolbar-background:map-get($colors, navbar) ;
 
